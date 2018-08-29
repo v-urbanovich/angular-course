@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
+
 @Component({
-  selector: 'uu-app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'uu-app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-course';
+    public title: string = 'angular-course';
 }
