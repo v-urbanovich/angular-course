@@ -3,6 +3,7 @@ const resorts: IResortItem[] = [
         id: 1,
         img: 'assets/images/1.jpg',
         address: 'Virginia, 1768  Perine Street',
+        country: 'VI',
         phone: 1285968685,   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Weather today in Virginia',
@@ -21,6 +22,7 @@ const resorts: IResortItem[] = [
         id: 2,
         img: 'assets/mumbai.jpg',
         address: ' Maharashtra,  Mumbai 1312 , Raheja Centre, Free Press Journal Rd, Nariman Point',
+        country: 'MB',
         phone: 952222842978,   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Weather today in Mumbai',
@@ -39,6 +41,7 @@ const resorts: IResortItem[] = [
         id: 3,
         img: 'assets/Panama.jpg',
         address: ' Panamá, Calle Uruguay (American Chamber of Comm. Building), Marbella',
+        country: 'PA',
         phone: 5072698440,   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Weather today in Panamá',
@@ -57,6 +60,7 @@ const resorts: IResortItem[] = [
         id: 4,
         img: 'assets/Egercsehi.jpg',
         address: ' Hungary, Egercsehi Erzsébet tér 45.',
+        country: 'HU',
         phone: 678436855119,   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Weather today in Egercsehi',
@@ -75,6 +79,7 @@ const resorts: IResortItem[] = [
         id: 5,
         img: 'assets/Alexandria.jpg',
         address: ' Egypt, Alexandria 14 Fahmy Wissa, P.O. Box: 2211',
+        country: 'EG',
         phone: 7336855119,   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Weather today in Alexandria',

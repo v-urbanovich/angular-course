@@ -5,7 +5,7 @@
             Resort Address
         </h5>
         <p>{{resort.address}}</p>
-        <h6>Tel: {{resort.phone | phoneFormat:7:2}}</h6>
+        <h6>Tel: {{resort.phone | phoneFormat: getFormat(resort.country)}}</h6>
     </div>
     <div class="activity-img">
         <ul>

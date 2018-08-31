@@ -2,6 +2,7 @@ interface IResortItem {
     id: number;
     img: string;
     address: string;
+    country: string;
     phone:  number;   // дополнительно задание pipe для форматирования
     weather: IWeather;
     social_info: ISocial;
@@ -26,3 +27,10 @@ type SortType = {
     title: string;
     sortBy: string
 };
+
+type PhoneFormatOptions = {
+    phoneLength?: number;
+    codeLength?: number
+};
+
+type PFMap = {[key: string]: PhoneFormatOptions};
