@@ -1,4 +1,4 @@
-import { resorts } from './resorts';
+import { resorts } from '../data/resorts';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
 

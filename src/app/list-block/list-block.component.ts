@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ResortDataService } from '../services/resort-data.service';
 import { Observable } from 'rxjs';
+import { sortTypes } from '../data/sortTypes';
 
 @Component({
     selector: 'uu-app-list-block',
@@ -10,13 +11,7 @@ import { Observable } from 'rxjs';
 export class ListBlockComponent implements OnInit {
     public resorts$: Observable<IResortItem[]>;
     public selectedResort: IResortItem | null = null;
-    public sortTypes: SortType[] = [
-        {title: 'all', sortBy: ''},
-        {title: 'hotel', sortBy: 'hotel'},
-        {title: 'fishing', sortBy: 'fishing'},
-        {title: 'tours', sortBy: 'tours'},
-        {title: 'weather', sortBy: 'weather'}
-        ];
+    public sortTypes: SortType[] = sortTypes;
     public sortBy: string = '';
 
     @Output()
