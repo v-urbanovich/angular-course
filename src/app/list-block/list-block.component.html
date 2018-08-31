@@ -6,10 +6,9 @@
 
     <div class="ele-strip">
         <ul>
-            <li><a href="#">Hotel</a></li>
-            <li><a href="#">Fishing</a></li>
-            <li><a href="#">Tours</a></li>
-            <li class="anc-bor"><a href="#">Weather</a></li>
+            <li *ngFor="let type of sortTypes"
+                [ngClass]="{active: type.sortBy === sortBy}"
+                (click)="selectType(type)"><a href="#">{{type.title}}</a></li>
         </ul>
     </div>
 
@@ -21,7 +20,7 @@
         <div class="activity_box">
 
             <div class="scrollbar" id="style-2" *ngIf="resorts$ | async as resorts; else spinner">
-                <uu-app-list-item *ngFor="let resort of resorts"
+                <uu-app-list-item *ngFor="let resort of resorts | resortsSorter:sortBy"
                                   [resort]="resort"
                                   [selectedResortId]="selectedResort?.id"
                                   (click)="onSelectResort(resort)"></uu-app-list-item>

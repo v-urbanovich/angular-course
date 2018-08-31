@@ -21,3 +21,8 @@ interface ISocial {
     followers: number;
     following: number;
 }
+
+type SortType = {
+    title: string;
+    sortBy: string
+};

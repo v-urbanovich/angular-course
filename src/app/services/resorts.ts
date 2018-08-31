@@ -53,6 +53,42 @@ const resorts: IResortItem[] = [
             following: 1
         },
         type: 'fishing',
+    }, {
+        id: 4,
+        img: 'assets/Egercsehi.jpg',
+        address: ' Hungary, Egercsehi Erzsébet tér 45.',
+        phone: 36855119,   // дополнительно задание pipe для форматирования
+        weather: {
+            title: 'Weather today in Egercsehi',
+            icon: 'rain',
+            water: 53,
+            temperature: 23
+        },
+        social_info: {
+            title: 'Hello from Egercsehi',
+            img: 'assets/images/b1.jpg',
+            followers: 5235,
+            following: 453
+        },
+        type: 'weather',
+    }, {
+        id: 5,
+        img: 'assets/Alexandria.jpg',
+        address: ' Egypt, Alexandria 14 Fahmy Wissa, P.O. Box: 2211',
+        phone: 36855119,   // дополнительно задание pipe для форматирования
+        weather: {
+            title: 'Weather today in Alexandria',
+            icon: 'rain',
+            water: 24,
+            temperature: 231
+        },
+        social_info: {
+            title: 'Hello from Alexandria',
+            img: 'assets/images/b1.jpg',
+            followers: 334,
+            following: 2
+        },
+        type: 'tours',
     }
 ];
 

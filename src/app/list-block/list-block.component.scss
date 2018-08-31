@@ -22,3 +22,20 @@
     align-items: center;
     background: url("/assets/spinner.gif") no-repeat center/65px;
 }
+
+.ele-strip {
+    text-transform: capitalize;
+    li:hover {
+        text-decoration: underline;
+    }
+
+    li.active {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    li:last-child {
+        border-right: none;
+    }
+
+}

@@ -7,6 +7,7 @@ import { SocialComponent } from './social/social.component';
 import { ListBlockComponent } from './list-block/list-block.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { ResortDataService } from './services/resort-data.service';
+import { ResortsSorterPipe } from './pipes/resorts-sorter.pipe';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { ResortDataService } from './services/resort-data.service';
         WeatherComponent,
         SocialComponent,
         ListBlockComponent,
-        ListItemComponent
+        ListItemComponent,
+        ResortsSorterPipe
     ],
     imports: [
         BrowserModule
