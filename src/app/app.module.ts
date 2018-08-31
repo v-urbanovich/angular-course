@@ -6,6 +6,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { SocialComponent } from './social/social.component';
 import { ListBlockComponent } from './list-block/list-block.component';
 import { ListItemComponent } from './list-item/list-item.component';
+import { ResortDataService } from './services/resort-data.service';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,9 @@ import { ListItemComponent } from './list-item/list-item.component';
     imports: [
         BrowserModule
     ],
-    providers: [],
+    providers: [
+        ResortDataService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

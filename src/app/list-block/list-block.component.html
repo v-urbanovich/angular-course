@@ -1,4 +1,6 @@
-<div class="element-bg-img"><img src="assets/images/1.jpg" alt="" class="img-responsive"></div>
+<div class="element-bg-img">
+    <img [src]="getImageUrl(selectedResort)" alt="" class="img-responsive">
+</div>
 
 <div class="element-left-bottom">
 
@@ -19,7 +21,10 @@
         <div class="activity_box">
             <div class="scrollbar" id="style-2">
 
-                <uu-app-list-item></uu-app-list-item>
+                <uu-app-list-item *ngFor="let resort of resorts"
+                                  [resort]="resort"
+                                  [selectedResortId]="selectedResort?.id"
+                                  (click)="onSelectResort(resort)"></uu-app-list-item>
 
             </div>
         </div>

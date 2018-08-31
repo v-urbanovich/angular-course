@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'uu-app-list-item',
-  templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.scss']
+    selector: 'uu-app-list-item',
+    templateUrl: './list-item.component.html',
+    styleUrls: ['./list-item.component.scss']
 })
-export class ListItemComponent implements OnInit {
+export class ListItemComponent {
 
-  public constructor() { }
+    @Input()
+    public resort: IResortItem;
 
-  public ngOnInit(): void {
-  }
+    @Input()
+    public selectedResortId: number;
 
 }

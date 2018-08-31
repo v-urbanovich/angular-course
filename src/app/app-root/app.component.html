@@ -3,15 +3,14 @@
 <div class="element">
 
     <div class="element-left">
-        <uu-app-list-block></uu-app-list-block>
+        <uu-app-list-block (selectResort)="selectResort($event)"></uu-app-list-block>
     </div>
 
-    <div class="element-right">
-        <uu-app-weather></uu-app-weather>
-        <uu-app-social></uu-app-social>
+    <div class="element-right" *ngIf="!!selectedResort">
+        <uu-app-weather [weather]="selectedResort.weather"></uu-app-weather>
+        <uu-app-social [info]="selectedResort.social_info"></uu-app-social>
     </div>
 
-    <div class="clear"></div>
 </div>
 
 <div class="copy-right">

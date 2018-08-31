@@ -1,0 +1,38 @@
+.activity-row {
+    position: relative;
+    cursor: pointer;
+    transition: .15s;
+    padding: 10px;
+    border-radius: 7px;
+
+    &:hover {
+        background-color: #f9f9f9;
+    }
+
+    &.selected {
+        background-color: #f7f7f7;
+
+        h5 img { display: inline-block; }
+    }
+
+    h5 img {
+        display: none;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+    }
+
+    .activity-img {
+        li {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            vertical-align: top;
+
+            img {
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+    }
+}

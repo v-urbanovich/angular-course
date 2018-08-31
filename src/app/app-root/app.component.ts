@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    public title: string = 'angular-course';
+
+    public selectedResort: IResortItem | null = null;
+
+    public selectResort(resort: IResortItem): void {
+        this.selectedResort = resort;
+    }
+
 }
