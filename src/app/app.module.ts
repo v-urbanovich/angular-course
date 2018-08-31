@@ -7,7 +7,8 @@ import { SocialComponent } from './social/social.component';
 import { ListBlockComponent } from './list-block/list-block.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { ResortDataService } from './services/resort-data.service';
-import { ResortsSorterPipe } from './pipes/resorts-sorter.pipe';
+import { ResortsSorterPipe } from './pipes/resorts-sorter/resorts-sorter.pipe';
+import { PhoneFormatPipe } from './pipes/phone-format/phone-format.pipe';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { ResortsSorterPipe } from './pipes/resorts-sorter.pipe';
         SocialComponent,
         ListBlockComponent,
         ListItemComponent,
-        ResortsSorterPipe
+        ResortsSorterPipe,
+        PhoneFormatPipe
     ],
     imports: [
         BrowserModule
