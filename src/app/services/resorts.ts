@@ -21,7 +21,7 @@ const resorts: IResortItem[] = [
         id: 2,
         img: 'assets/mumbai.jpg',
         address: ' Maharashtra,  Mumbai 1312 , Raheja Centre, Free Press Journal Rd, Nariman Point',
-        phone: 2222842978,   // дополнительно задание pipe для форматирования
+        phone: 952222842978,   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Weather today in Mumbai',
             icon: 'sun',
@@ -30,7 +30,7 @@ const resorts: IResortItem[] = [
         },
         social_info: {
             title: 'Hello from Mumbai',
-            img: 'assets/images/b1.jpg',
+            img: 'assets/Mumbai-h.jpg',
             followers: 6543,
             following: 2345
         },
@@ -48,7 +48,7 @@ const resorts: IResortItem[] = [
         },
         social_info: {
             title: 'Hello from Panamá',
-            img: 'assets/images/b1.jpg',
+            img: 'assets/Panama-h.jpg',
             followers: 23,
             following: 1
         },
@@ -57,7 +57,7 @@ const resorts: IResortItem[] = [
         id: 4,
         img: 'assets/Egercsehi.jpg',
         address: ' Hungary, Egercsehi Erzsébet tér 45.',
-        phone: 36855119,   // дополнительно задание pipe для форматирования
+        phone: 678436855119,   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Weather today in Egercsehi',
             icon: 'rain',
@@ -66,7 +66,7 @@ const resorts: IResortItem[] = [
         },
         social_info: {
             title: 'Hello from Egercsehi',
-            img: 'assets/images/b1.jpg',
+            img: 'assets/Hungary-h.jpg',
             followers: 5235,
             following: 453
         },
@@ -75,7 +75,7 @@ const resorts: IResortItem[] = [
         id: 5,
         img: 'assets/Alexandria.jpg',
         address: ' Egypt, Alexandria 14 Fahmy Wissa, P.O. Box: 2211',
-        phone: 36855119,   // дополнительно задание pipe для форматирования
+        phone: 7336855119,   // дополнительно задание pipe для форматирования
         weather: {
             title: 'Weather today in Alexandria',
             icon: 'rain',
@@ -84,7 +84,7 @@ const resorts: IResortItem[] = [
         },
         social_info: {
             title: 'Hello from Alexandria',
-            img: 'assets/images/b1.jpg',
+            img: 'assets/Alexandria-h.jpg',
             followers: 334,
             following: 2
         },
