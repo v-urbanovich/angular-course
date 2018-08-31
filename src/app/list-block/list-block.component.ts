@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ResortDataService } from '../services/resort-data.service';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'uu-app-list-block',
@@ -7,7 +8,7 @@ import { ResortDataService } from '../services/resort-data.service';
     styleUrls: ['./list-block.component.scss']
 })
 export class ListBlockComponent implements OnInit {
-    public resorts: IResortItem[];
+    public resorts$: Observable<IResortItem[]>;
     public selectedResort: IResortItem | null = null;
 
     @Output()
@@ -17,7 +18,7 @@ export class ListBlockComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        this.resorts = this._resortDataService.getResorts();
+        this.resorts$ = this._resortDataService.getResorts();
     }
 
     public onSelectResort(resort: IResortItem): void {
