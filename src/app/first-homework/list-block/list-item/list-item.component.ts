@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { formats } from '../../../common/data/phoneFormats';
+import { formats } from '../../common/data/phoneFormats';
 
 @Component({
     selector: 'uu-app-list-item',

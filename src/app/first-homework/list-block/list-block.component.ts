@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ResortDataService } from '../services/resort-data.service';
 import { Observable } from 'rxjs';
-import { filterTypes } from '../../common/data/filterTypes';
+import { filterTypes } from '../common/data/filterTypes';
 
 @Component({
     selector: 'uu-app-list-block',

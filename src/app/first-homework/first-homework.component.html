@@ -1,0 +1,19 @@
+<h1>Hot Weather Widget</h1>
+
+<div class="element">
+
+  <div class="element-left">
+    <uu-app-list-block (selectResort)="selectResort($event)"></uu-app-list-block>
+  </div>
+
+  <div class="element-right" *ngIf="!!selectedResort">
+    <uu-app-weather [weather]="selectedResort.weather"></uu-app-weather>
+    <uu-app-social [info]="selectedResort.social_info"></uu-app-social>
+  </div>
+
+</div>
+
+<div class="copy-right">
+  <p>© 2015 Hot Weather Widget. All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">
+    W3layouts </a></p>
+</div>
