@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ResortDataService } from '../services/resort-data.service';
 import { Observable } from 'rxjs';
-import { sortTypes } from '../data/sortTypes';
+import { filterTypes } from '../../common/data/filterTypes';
 
 @Component({
     selector: 'uu-app-list-block',
@@ -11,8 +11,8 @@ import { sortTypes } from '../data/sortTypes';
 export class ListBlockComponent implements OnInit {
     public resorts$: Observable<IResortItem[]>;
     public selectedResort: IResortItem | null = null;
-    public sortTypes: SortType[] = sortTypes;
-    public sortBy: string = '';
+    public sortTypes: Set<FilterType> = filterTypes;
+    public filterBy: string = '';
 
     @Output()
     public selectResort: EventEmitter<IResortItem> = new EventEmitter();
@@ -33,8 +33,8 @@ export class ListBlockComponent implements OnInit {
         return resort && resort.img || 'assets/your-tour.png';
     }
 
-    public selectType(type: SortType): void {
-        this.sortBy = type.sortBy;
+    public selectType(type: FilterType): void {
+        this.filterBy = type.filterBy;
     }
 
 }

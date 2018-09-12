@@ -23,9 +23,9 @@ interface ISocial {
     following: number;
 }
 
-type SortType = {
+type FilterType = {
     title: string;
-    sortBy: string
+    filterBy: string
 };
 
 type PhoneFormatOptions = {

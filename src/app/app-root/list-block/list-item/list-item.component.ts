@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { formats } from '../data/phoneFormats';
+import { formats } from '../../../common/data/phoneFormats';
 
 @Component({
     selector: 'uu-app-list-item',

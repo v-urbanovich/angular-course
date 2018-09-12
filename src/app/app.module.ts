@@ -2,13 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app-root/app.component';
-import { WeatherComponent } from './weather/weather.component';
-import { SocialComponent } from './social/social.component';
-import { ListBlockComponent } from './list-block/list-block.component';
-import { ListItemComponent } from './list-item/list-item.component';
-import { ResortDataService } from './services/resort-data.service';
-import { ResortsSorterPipe } from './pipes/resorts-sorter/resorts-sorter.pipe';
-import { PhoneFormatPipe } from './pipes/phone-format/phone-format.pipe';
+import { WeatherComponent } from './app-root/weather/weather.component';
+import { SocialComponent } from './app-root/social/social.component';
+import { ListBlockComponent } from './app-root/list-block/list-block.component';
+import { ListItemComponent } from './app-root/list-block/list-item/list-item.component';
+import { ResortDataService } from './app-root/services/resort-data.service';
+import { ResortsFilterPipe } from './app-root/list-block/pipes/resorts-filter.pipe';
+import { PhoneFormatPipe } from './common/pipes/phone-format.pipe';
 
 @NgModule({
     declarations: [
@@ -17,7 +17,7 @@ import { PhoneFormatPipe } from './pipes/phone-format/phone-format.pipe';
         SocialComponent,
         ListBlockComponent,
         ListItemComponent,
-        ResortsSorterPipe,
+        ResortsFilterPipe,
         PhoneFormatPipe
     ],
     imports: [

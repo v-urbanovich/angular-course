@@ -20,7 +20,7 @@
         <div class="activity_box">
 
             <div class="scrollbar" id="style-2" *ngIf="resorts$ | async as resorts; else spinner">
-                <uu-app-list-item *ngFor="let resort of resorts | resortsSorter:sortBy"
+                <uu-app-list-item *ngFor="let resort of resorts | resortsFilter:filterBy"
                                   [resort]="resort"
                                   [selectedResortId]="selectedResort?.id"
                                   (click)="onSelectResort(resort)"></uu-app-list-item>
