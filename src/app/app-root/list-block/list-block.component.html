@@ -17,10 +17,12 @@
         <h3>Righteous indignation & like</h3>
         <span class="line"> </span>
 
-        <div class="activity_box">
+        <div class="activity_box" >
 
             <div class="scrollbar" id="style-2" *ngIf="resorts$ | async as resorts; else spinner">
-                <uu-app-list-item *ngFor="let resort of resorts | resortsFilter:filterBy"
+                <uu-app-list-item *ngFor="let resort of resorts | resortsFilter:filterBy; index as index"
+                                  [isFirst]="index === 0"
+                                  [selectedType]="filterBy"
                                   [resort]="resort"
                                   [selectedResortId]="selectedResort?.id"
                                   (click)="onSelectResort(resort)"></uu-app-list-item>
