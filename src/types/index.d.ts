@@ -39,3 +39,7 @@ type RouteLink = {
     title: string;
     route: string;
 };
+
+interface IFormError {
+
+}

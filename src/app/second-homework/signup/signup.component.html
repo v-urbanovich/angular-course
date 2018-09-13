@@ -1,21 +1,23 @@
 <div id="signup">
   <h1>Sign Up for Free</h1>
 
-  <form action="/" method="post">
+  <form [formGroup]="signUpForm" (submit)="sendForm(signUpForm)">
 
     <div class="top-row">
       <div class="field-wrap">
-        <label>
+        <label *ngIf="!fName.value">
           First Name<span class="req">*</span>
         </label>
-        <input type="text" required autocomplete="off" />
+        <input type="text" formControlName="firstName" #fName>
+        <div class="error" *ngIf="getErrorText('firstName')">{{ getErrorText('firstName') }}</div>
       </div>
 
       <div class="field-wrap">
-        <label>
+        <label *ngIf="!lName.value">
           Last Name<span class="req">*</span>
         </label>
-        <input type="text"required autocomplete="off"/>
+        <input type="text" formControlName="lastName" #lName>
+        <div class="error" *ngIf="getErrorText('firstName')">{{ getErrorText('lastName') }}</div>
       </div>
     </div>
 
@@ -23,14 +25,14 @@
       <label>
         Email Address<span class="req">*</span>
       </label>
-      <input type="email"required autocomplete="off"/>
+      <input type="email" formControlName="email">
     </div>
 
     <div class="field-wrap">
       <label>
         Set A Password<span class="req">*</span>
       </label>
-      <input type="password"required autocomplete="off"/>
+      <input type="password" formControlName="password">
     </div>
 
     <button type="submit" class="button button-block">Get Started</button>

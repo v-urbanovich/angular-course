@@ -123,6 +123,15 @@ textarea {
 .field-wrap {
     position: relative;
     margin-bottom: 40px;
+
+    .error {
+        color: #f53426;
+        position: absolute;
+        top: 42px;
+        left: 0;
+    }
+
+    input.ng-untouched + .error { display: none; }
 }
 
 .top-row:after {

@@ -8,7 +8,7 @@
         <ul>
             <li *ngFor="let type of sortTypes"
                 [ngClass]="{active: type.sortBy === sortBy}"
-                (click)="selectType(type)"><a href="#">{{type.title}}</a></li>
+                (click)="selectType(type)"><a>{{type.title}}</a></li>
         </ul>
     </div>
 

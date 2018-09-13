@@ -28,6 +28,7 @@
 
 .ele-strip {
     text-transform: capitalize;
+    li { cursor: pointer }
     li:hover {
         text-decoration: underline;
     }
