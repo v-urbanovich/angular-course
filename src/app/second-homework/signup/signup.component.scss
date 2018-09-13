@@ -2,16 +2,6 @@
     box-sizing: border-box;
 }
 
-html {
-    overflow-y: scroll;
-}
-
-:host {
-    display: block;
-    background: #c1bdba;
-    font-family: 'Titillium Web', sans-serif;
-}
-
 a {
     text-decoration: none;
     color: #1ab188;

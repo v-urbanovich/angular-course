@@ -32,7 +32,12 @@ img{max-width:100%;}
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
-    background:#313144;
+    &.first-homework {
+        background:#313144;
+    }
+    &.second-homework {
+        background:#c1bdba;
+    }
 }
 a {
     text-decoration: none;

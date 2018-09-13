@@ -34,3 +34,8 @@ type PhoneFormatOptions = {
 };
 
 type PFMap = {[key: string]: PhoneFormatOptions};
+
+type RouteLink = {
+    title: string;
+    route: string;
+};

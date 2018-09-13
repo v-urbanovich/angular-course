@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+    public pages: RouteLink[] = [
+        {title: 'First Homework', route: 'first-homework'},
+        {title: 'Second Homework', route: 'second-homework'}
+    ];
+
 }

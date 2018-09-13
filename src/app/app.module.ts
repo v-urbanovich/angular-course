@@ -14,8 +14,8 @@ import { SecondHomeworkModule } from './second-homework/second-homework.module';
     ],
     imports: [
         BrowserModule,
-        FirstHomeworkModule,
         SecondHomeworkModule,
+        FirstHomeworkModule,
         RouterModule.forRoot(routes)
     ],
     bootstrap: [AppComponent]

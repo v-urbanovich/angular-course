@@ -9,10 +9,13 @@ import { ListItemComponent } from './list-block/list-item/list-item.component';
 import { ResortDataService } from './services/resort-data.service';
 import { ResortsFilterPipe } from './list-block/pipes/resorts-filter.pipe';
 import { PhoneFormatPipe } from './common/pipes/phone-format.pipe';
+import { RouterModule } from '@angular/router';
+import { routes } from './routes';
 
 @NgModule({
     imports: [
         CommonModule,
+        RouterModule.forChild(routes)
     ],
     declarations: [
         FirstHomeworkComponent,
@@ -25,9 +28,6 @@ import { PhoneFormatPipe } from './common/pipes/phone-format.pipe';
     ],
     providers: [
         ResortDataService
-    ],
-    exports: [
-        FirstHomeworkComponent
     ]
 })
 export class FirstHomeworkModule {

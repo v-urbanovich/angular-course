@@ -1,7 +1,11 @@
 <header>
-    <div class="hw-link" [routerLink]="['first-homework']" routerLinkActive="active">First Homework</div>
-    <div class="hw-link" [routerLink]="['second-homework']" routerLinkActive="active">Second Homework</div>
-    <div class="hw-link">Third Homework</div>
+
+    <div class="hw-link" *ngFor="let page of pages"
+         [routerLink]="[page.route]"
+         routerLinkActive="active">
+        {{page.title}}
+    </div>
+
 </header>
 
 <router-outlet></router-outlet>
