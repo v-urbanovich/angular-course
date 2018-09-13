@@ -40,6 +40,9 @@ type RouteLink = {
     route: string;
 };
 
-interface IFormError {
-
+interface ISignupFormValue {
+    email: string;
+    firstName: string;
+    lastName: string;
+    password: string;
 }

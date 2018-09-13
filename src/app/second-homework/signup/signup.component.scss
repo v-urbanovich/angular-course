@@ -131,7 +131,11 @@ textarea {
         left: 0;
     }
 
+    input:focus + .error,
     input.ng-untouched + .error { display: none; }
+
+    input.ng-invalid:not(.ng-untouched) { border-color: #f53426;}
+    input.ng-invalid:focus { border-color: #1ab188;}
 }
 
 .top-row:after {

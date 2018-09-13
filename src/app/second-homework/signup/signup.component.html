@@ -17,22 +17,24 @@
           Last Name<span class="req">*</span>
         </label>
         <input type="text" formControlName="lastName" #lName>
-        <div class="error" *ngIf="getErrorText('firstName')">{{ getErrorText('lastName') }}</div>
+        <div class="error" *ngIf="getErrorText('lastName')">{{ getErrorText('lastName') }}</div>
       </div>
     </div>
 
     <div class="field-wrap">
-      <label>
+      <label *ngIf="!email.value">
         Email Address<span class="req">*</span>
       </label>
-      <input type="email" formControlName="email">
+      <input type="email" formControlName="email" #email>
+      <div class="error" *ngIf="getErrorText('email')">{{ getErrorText('email') }}</div>
     </div>
 
     <div class="field-wrap">
-      <label>
+      <label *ngIf="!password.value">
         Set A Password<span class="req">*</span>
       </label>
-      <input type="password" formControlName="password">
+      <input type="password" formControlName="password" #password>
+      <div class="error" *ngIf="getErrorText('password')">{{ getErrorText('password') }}</div>
     </div>
 
     <button type="submit" class="button button-block">Get Started</button>
