@@ -1,19 +1,30 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+import { GITHUB_URL } from '../constants';
 
 @Injectable()
 export class GetReposService {
 
-  public constructor(private http: HttpClient) { }
+    public lastRequestError: string | null;
 
-  public getRepos(): Observable<IGitHubRepo[]> {
-    return this.http.get<IGitHubRepo[]>('https://api.github.com/search/repositories?q=a')
-        .pipe(
-            map((data: {items: IGitHubRepo[]}) => {
-              return data.items;
-            })
-        );
-  }
+    public constructor(
+        private http: HttpClient,
+        @Inject(GITHUB_URL) private url: string
+    ) { }
+
+    public getRepos(query: string): Observable<IGitHubRepo[]> | any {
+        this.lastRequestError = null;
+        if (!query) { return of([]); }
+
+        return this.http.get<IGitHubRepo[]>(`${this.url}${query}`)
+            .pipe(
+                map((data: { items: IGitHubRepo[] }) => data.items),
+                catchError((error: any) => {
+                    this.lastRequestError = error.message;
+                    return of([]);
+                }),
+            );
+    }
 }

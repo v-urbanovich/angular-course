@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ResortDataService } from '../services/resort-data.service';
+import { ResortDataService } from './services/resort-data.service';
 import { Observable } from 'rxjs';
 import { filterTypes } from '../common/data/filterTypes';
 

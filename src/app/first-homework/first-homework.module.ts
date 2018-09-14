@@ -6,7 +6,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { SocialComponent } from './social/social.component';
 import { ListBlockComponent } from './list-block/list-block.component';
 import { ListItemComponent } from './list-block/list-item/list-item.component';
-import { ResortDataService } from './services/resort-data.service';
+import { ResortDataService } from './list-block/services/resort-data.service';
 import { ResortsFilterPipe } from './list-block/pipes/resorts-filter.pipe';
 import { PhoneFormatPipe } from './common/pipes/phone-format.pipe';
 import { RouterModule } from '@angular/router';
