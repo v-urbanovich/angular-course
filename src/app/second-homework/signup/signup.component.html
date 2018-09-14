@@ -27,6 +27,9 @@
       </label>
       <input type="email" formControlName="email" #email>
       <div class="error" *ngIf="getErrorText('email')">{{ getErrorText('email') }}</div>
+      <div class="spinner" *ngIf="loadingInProcess()">
+        <img src="https://loading.io/spinners/comets/lg.comet-spinner.gif">
+      </div>
     </div>
 
     <div class="field-wrap">
@@ -37,7 +40,7 @@
       <div class="error" *ngIf="getErrorText('password')">{{ getErrorText('password') }}</div>
     </div>
 
-    <button type="submit" class="button button-block">Get Started</button>
+    <button type="submit" [disabled]="loadingInProcess()" class="button button-block">Get Started</button>
 
   </form>
 

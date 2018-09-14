@@ -40,9 +40,12 @@ type RouteLink = {
     route: string;
 };
 
-interface ISignupFormValue {
+interface ILoginData {
     email: string;
+    password: string;
+}
+
+interface ISignupFormValue extends ILoginData {
     firstName: string;
     lastName: string;
-    password: string;
 }

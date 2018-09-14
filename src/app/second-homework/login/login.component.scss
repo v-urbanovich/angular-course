@@ -123,6 +123,19 @@ textarea {
 .field-wrap {
     position: relative;
     margin-bottom: 40px;
+
+    .error {
+        color: #f53426;
+        position: absolute;
+        top: 42px;
+        left: 0;
+    }
+
+    input:focus + .error,
+    input.ng-untouched + .error { display: none; }
+
+    input.ng-invalid:not(.ng-untouched) { border-color: #f53426;}
+    input.ng-invalid:focus { border-color: #1ab188;}
 }
 
 .top-row:after {
@@ -153,9 +166,15 @@ textarea {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     -webkit-appearance: none;
+    cursor: pointer;
 }
 .button:hover, .button:focus {
     background: #179b77;
+}
+
+.button[disabled] {
+    background-color: #a7b5b1;
+    cursor: default;
 }
 
 .button-block {

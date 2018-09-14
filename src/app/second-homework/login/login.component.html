@@ -1,25 +1,35 @@
 <div id="login">
   <h1>Welcome Back!</h1>
 
-  <form action="/" method="post">
+  <form #loginForm="ngForm">
 
     <div class="field-wrap">
-      <label>
+      <label *ngIf="!email.value">
         Email Address<span class="req">*</span>
       </label>
-      <input type="email"required autocomplete="off"/>
+      <input type="email"
+             required
+             autocomplete="off"
+             [(ngModel)]="loginData.email"
+             [validationDirective]="'email'"
+             name="email" #email="ngModel">
+      <div class="error" *ngIf="getErrorText(email.errors)">{{ getErrorText(email.errors) }}</div>
     </div>
 
     <div class="field-wrap">
-      <label>
+      <label *ngIf="!password.value">
         Password<span class="req">*</span>
       </label>
-      <input type="password"required autocomplete="off"/>
+      <input type="password"
+             required
+             autocomplete="off"
+             [(ngModel)]="loginData.password"
+             [validationDirective]="'password'"
+             name="password" #password="ngModel">
+      <div class="error" *ngIf="getErrorText(password.errors)">{{ getErrorText(password.errors) }}</div>
     </div>
 
-    <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-    <button class="button button-block">Log In</button>
+    <button class="button button-block" [disabled]="loginForm.invalid" (click)="sendForm(loginForm)">Log In</button>
 
   </form>
 

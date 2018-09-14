@@ -6,7 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ErrorParserService } from './services/error-parser.service';
+import { ErrorParserService } from './common/services/error-parser.service';
+import { ValidatorsService } from './common/services/validators.service';
+import { ValidationDirective } from './common/directives/validation.directive';
 
 @NgModule({
     imports: [
@@ -17,9 +19,13 @@ import { ErrorParserService } from './services/error-parser.service';
     declarations: [
         SecondHomeworkComponent,
         SignupComponent,
-        LoginComponent
+        LoginComponent,
+        ValidationDirective
     ],
-    providers: [ErrorParserService]
+    providers: [
+        ErrorParserService,
+        ValidatorsService
+    ]
 })
 export class SecondHomeworkModule {
 }
