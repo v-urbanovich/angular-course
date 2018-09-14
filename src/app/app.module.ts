@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 
 import { FirstHomeworkModule } from './first-homework/first-homework.module';
 import { SecondHomeworkModule } from './second-homework/second-homework.module';
+import { ThirdHomeworkModule } from './third-homework/third-homework.module';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { SecondHomeworkModule } from './second-homework/second-homework.module';
         BrowserModule,
         SecondHomeworkModule,
         FirstHomeworkModule,
+        ThirdHomeworkModule,
         RouterModule.forRoot(routes)
     ],
     bootstrap: [AppComponent]

@@ -10,7 +10,8 @@ export class AppComponent {
 
     public pages: RouteLink[] = [
         {title: 'First Homework', route: 'first-homework'},
-        {title: 'Second Homework', route: 'second-homework'}
+        {title: 'Second Homework', route: 'second-homework'},
+        {title: 'Third Homework', route: 'third-homework'}
     ];
 
 }
