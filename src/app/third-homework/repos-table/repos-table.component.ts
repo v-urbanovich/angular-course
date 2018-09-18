@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Component({
     selector: 'uu-app-repos-table',
@@ -9,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ReposTableComponent {
 
     @Input('repositories')
-    public dataSource: Observable<IGitHubRepo[]>;
+    public dataSource: IGitHubRepo[];
     public displayedColumns: string[] = ['ownerName', 'name', 'language', 'score'];
 
 }

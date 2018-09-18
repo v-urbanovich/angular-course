@@ -35,5 +35,5 @@
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  <tr mat-footer-row *matFooterRowDef="displayedColumns" [ngClass]="{hidden: (dataSource | async)?.length}"></tr>
+  <tr mat-footer-row *matFooterRowDef="displayedColumns" [ngClass]="{hidden: (dataSource)?.length}"></tr>
 </table>

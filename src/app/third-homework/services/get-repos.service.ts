@@ -21,10 +21,10 @@ export class GetReposService {
         return this.http.get<IGitHubRepo[]>(`${this.url}${query}`)
             .pipe(
                 map((data: { items: IGitHubRepo[] }) => data.items),
-                catchError((error: any) => {
-                    this.lastRequestError = error.message;
-                    return of([]);
-                }),
+                // catchError((error: any) => {
+                //     this.lastRequestError = error.message;
+                //     return of([]);
+                // })
             );
     }
 }

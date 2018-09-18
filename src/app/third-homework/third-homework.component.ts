@@ -12,20 +12,25 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 export class ThirdHomeworkComponent implements OnInit {
 
     public searchInput: FormControl = new FormControl();
-    public repositories: Observable<IGitHubRepo[]>;
+    public repositories: IGitHubRepo[];
 
     public constructor(private _gitHubReposService: GetReposService) {}
 
     public ngOnInit(): void {
         document.body.style.backgroundColor = '#313177';
 
-        // Request doubling ????
-        this.repositories = this.searchInput.valueChanges
+        this.searchInput.valueChanges
                 .pipe(
                     debounceTime(300),
                     distinctUntilChanged(),
                     switchMap((value: string) =>  this._gitHubReposService.getRepos(value)),
-                );
+                )
+            .subscribe((repos: IGitHubRepo[]) => {
+                this.repositories = repos;
+            }, (error: any) => {
+                this._gitHubReposService.lastRequestError = error.message;
+                this.repositories = [];
+            });
     }
 
     public getErrorText(): string {
